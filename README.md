@@ -1,2 +1,2 @@
-# Visual_Portfolio
- Visual Art Portfolio
+# portfolio
+ Illustration Portfolio

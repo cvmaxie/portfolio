@@ -1,0 +1,165 @@
+/*----------TEXT CSS----------*/
+    @charset "utf-8";
+    @import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+    p, ul, h1, h2, h3 {
+        font-family: 'Ibarra Real Nova', serif;
+        font-size: 1em;
+        color: #dec07f;
+    }
+    a:link, a:visited {
+        text-decoration: none;
+        color: #dec07f;
+        transition: all 300ms;
+    }
+    body {
+        margin: 0;
+        background-color: black;
+    }
+
+/*----------NAVIGATION----------*/
+    .navigation {
+        position: static;
+        margin: auto;
+        padding: 0;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        list-style-type: none;
+        background-color: #333;
+        outline-width: 1px;
+        outline-style: solid;
+        outline-color: #000000;
+        box-shadow: 0px 0px 5px #000000;
+    }
+    li > a:link, a:visited {
+        display: block;
+        margin-left: .25em;
+        margin-right: .25em;
+        padding: .75em;
+        color: #dec07f;
+        text-decoration: none;
+        text-align: center;
+    }
+    li > a:hover, a:active {
+        background-color: #53434373;
+        outline-width: 1px;
+        outline-style: dotted;
+        outline-color: #dec07f;
+        box-shadow: 0px 0px 4px #dec07f;
+    }
+    .home {
+        margin-left: 0;
+        font-weight: bold;
+        text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+    }
+    .home:hover {
+        background-color: #6e634c;
+        color: #f2deb1;
+    }
+
+/*----------CONTENT + CONTAINER----------*/
+    body {
+        margin: 0%;
+        background-color: #222222;
+        background-image: url('svg/pinstripe.svg');
+    }
+    footer {
+        text-shadow: 0px 0px 4px;
+    }
+    .container {
+        margin: auto;
+    }
+    .gridbox {
+        display: flexbox;
+    }
+    .griditem {
+        margin: 0px;
+        width: 100%;
+        margin-top: 8px;
+    }
+    img {
+        box-shadow: 0px 0px 2px #000000; 
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: #000000;
+        transition: all 350ms;
+    }
+    img:hover {
+        box-shadow: 0px 0px 3px #000000;
+        outline-style: dashed;
+        outline-color: revert;
+    }
+
+/*----------MEDIA QUERIES----------*/
+/*-----MOBILE-----*/
+    @media (max-width: 37.9em){
+        .container {
+            width: 90%;
+        }
+        .navigation > li:not(:first-child) {
+            display: none;
+        }
+        .navigation.responsive > li {
+            display: block;
+        }
+        #dropdown {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            top: 0;
+            margin: .55em;
+            width: 1.5em;
+        }
+        #icon {
+            box-shadow: none; 
+            outline-style: none;
+            transition: all 350ms;
+        }
+    }
+
+/*-----SMALL-MEDIUM DESKTOP-----*/
+    @media (min-width: 38em) {
+        .navigation {
+            position: sticky;
+            display: flex;
+            justify-content: center;
+        }
+        #dropdown {
+            display: none;
+        }
+        .container {
+            width: 80%;
+            margin-top: 5px;
+        }
+        
+        .gridbox {
+          line-height: 0;
+          box-sizing: border-box;
+          margin: 0;
+          column-gap: 8px;
+          column-count: 2;
+            justify-content: center
+        }
+         .griditem {
+            display: inline;
+          }    
+    }
+        
+/*-----LARGE DESKTOP-----*/
+    @media (min-width: 55em) {
+        .container {
+            width: 70%;
+        }
+        .gridbox {
+          column-count: 3;
+        }
+    }
+     @media (min-width: 75em) {
+        .container {
+            width: 70%;
+        }
+        .gridbox {
+          column-count: 4;
+        }
+    }
