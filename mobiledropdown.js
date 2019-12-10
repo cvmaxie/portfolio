@@ -1,6 +1,6 @@
-function myFunction() {
-    var navmenu = document.getElementById("navmenu");
-    var icon = document.getElementById("icon");
+function dropdown() {
+    let navmenu = document.getElementById("navmenu");
+    let icon = document.getElementById("icon");
 
     if (navmenu.className === "navigation") {
         navmenu.className += " responsive";

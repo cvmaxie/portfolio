@@ -1,47 +1,54 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Maxolotle</title>
     <link href="main.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-        <div id="dropdown" href="javascript:void(0);" onclick="myFunction()"><img id="icon" src="svg/bars.svg" style="width: 100%"></div>
-        <ul class="navigation" id="navmenu">
-            <li><a class="home" href="/index.html">Maxolotle</a></li>
-            <li><a href="/index.html">Illustration</a></li>
-            <li><a href="/visdev.html">Visual Development</a></li>
-            <li><a href="/sprites.html">Game Art</a></li>
-            <li><a href="/animations.html">Animations</a></li>
-            <li><a href="/about.html">About/Contact</a></li>
-        </ul>
+    <div id="dropdown" href="javascript:void(0);" onclick="dropdown()"><img id="icon" src="svg/bars.svg"
+            style="width: 100%"></div>
+    <ul class="navigation" id="navmenu">
+        <button id="myBtn">Open Modal</button>
+        <li><a class="home" href="/index.html">Maxolotle</a></li>
+        <li><a href="/index.html">Illustration</a></li>
+        <li><a href="/visdev.html">Visual Development</a></li>
+        <li><a href="/animations.html">Animations</a></li>
+    </ul>
     <div class="container">
-            <main>
-                    <div class="gridbox">            
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/g.jpg" srcset="images/g.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/c.jpg" srcset="images/c.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/g.jpg" srcset="images/e.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/c.jpg" srcset="images/l.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/g.jpg" srcset="images/g.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/c.jpg" srcset="images/h.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/g.jpg" srcset="images/c.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/c.jpg" srcset="images/h.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/g.jpg" srcset="images/g.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/c.jpg" srcset="images/l.jpg 2x" alt="description"></a>
-                    <a href="poopy" id="imgbox"><img class="griditem" src="images/g.jpg" srcset="images/g.jpg 2x" alt="description"></a>
-                    </div>
-            </main>
+        <main>
+            <div class="gridbox">
+                <img id="1" class="griditem" src="images/b.jpg" srcset="images/b.jpg 2x" alt="description">
+                <img id="2" class="griditem" src="images/c.jpg" srcset="images/c.jpg 2x" alt="description">
+                <img id="3" class="griditem" src="images/e.jpg" srcset="images/e.jpg 2x" alt="description">
+            </div>
+        </main>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="close"><img id="x" src="svg/x.svg" style="width: 100%"></div>
+        <div class="gallery">
+            <img id="thispic" src="images/b.jpg">
+            <h3 id="picdesc">Title - date - insert description here</h3>
+            <div class="thumblist">
+                <img class="thumbnail" src="images/b.jpg"> 
+                <img class="thumbnail" src="images/c.jpg"> 
+                <img class="thumbnail" src="images/e.jpg">
+            </div>
+
         </div>
-        <div class="modal">            
-                <div class="gallery">
-                        <p>filler</p>
-                </div>
-        </div>
-            <footer>
-                    <p><a href="/index.html">social media links</a></p>
-            </footer>
+    </div>
+
+    <footer>
+        <p><a href="/index.html">social media links</a></p>
+    </footer>
     </div>
 </body>
+
 <script src="mobiledropdown.js"></script>
+<script src="modalgallery.js"></script>
+
 </html>
