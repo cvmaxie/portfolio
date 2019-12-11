@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Visual Development- Max</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="dropdown" href="javascript:void(0);" onclick="dropdown()"><img id="icon" src="svg/bars.svg"
+            style="width: 100%"></div>
+    <ul class="navigation" id="navmenu">
+        <li><a class="home" href="index.html">Maxolotle</a></li>
+        <li><a href="index.html">Illustration</a></li>
+        <li><a class="currentpage" href="visdev.html">Visual Development</a></li>
+        <li><a href="animations.html">Animations</a></li>
+    </ul>
+    <div class="container">
+        <main>
+            <div class="gridbox" style="display: grid; grid-template-columns: 100%">
+                <div class="griditem"><img src="images/m.jpg" srcset="images/m_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(1)" alt="fantasy cave interior with characters"></div>
+                <div class="griditem"><img src="images/k.jpg" srcset="images/k_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(2)" alt="description"></div>
+                <div class="griditem"><img src="images/l.jpg" srcset="images/l_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(3)" alt="description"></div>
+
+            </div>
+        </main>
+        <footer>
+            <h1><a href="http://i6.cims.nyu.edu/~ms12047/">i6 Index</a></h1>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="close"><img id="x" src="svg/x.svg" onclick="closeModal()" style="width: 100%"></div>
+        <a class="prev" onclick="nextslide(-1)" style="left: 14%;">&#10094;</a>
+        <a class="next" onclick="nextslide(1)" style="right: 14%;">&#10095;</a>
+        <div class="gallery">
+
+            <div class="galleryitem"><img src="images/m.jpg" srcset="images/m_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(1)" alt="fantasy cave interior with characters"></div>
+            <div class="galleryitem"><img src="images/k.jpg" srcset="images/k_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(2)" alt="fluffy dragon animated character design"></div>
+            <div class="galleryitem"><img src="images/l.jpg" srcset="images/l_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(3)" alt="illustrated girl with pet owl perched on her shoulder">
+            </div>
+
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Pink Salt Cave -&nbsp;</h2>
+                    <p>2019</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Goat Dragon -&nbsp;</h2>
+                    <p>2018</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Mary -&nbsp;</h2>
+                    <p>2019</p>
+                </div>
+            </div>
+
+            <div class="thumblist">
+                <img class="thumbnail" src="images/m.jpg" onclick="currentSlide(1)" alt="description">
+                <img class="thumbnail" src="images/k.jpg" onclick="currentSlide(2)" alt="description">
+                <img class="thumbnail" src="images/l.jpg" onclick="currentSlide(3)" alt="description">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="mobiledropdown.js"></script>
+<script src="modalgallery.js"></script>
+
+</html>

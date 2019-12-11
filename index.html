@@ -3,48 +3,159 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Maxolotle</title>
+    <title>Max</title>
     <link href="main.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div id="dropdown" href="javascript:void(0);" onclick="dropdown()"><img id="icon" src="svg/bars.svg"
+    <div id="dropdown" href="javascript:void(0);" onclick="dropdown()"><img id="icon" src="svg/bars.svg" alt="show more"
             style="width: 100%"></div>
     <ul class="navigation" id="navmenu">
-        <button id="myBtn">Open Modal</button>
-        <li><a class="home" href="/index.html">Maxolotle</a></li>
-        <li><a href="/index.html">Illustration</a></li>
-        <li><a href="/visdev.html">Visual Development</a></li>
-        <li><a href="/animations.html">Animations</a></li>
+        <li><a class="home" href="index.html">Maxolotle</a></li>
+        <li><a class="currentpage" href="index.html">Illustration</a></li>
+        <li><a href="visdev.html">Visual Development</a></li>
+        <li><a href="animations.html">Animations</a></li>
     </ul>
     <div class="container">
         <main>
             <div class="gridbox">
-                <img id="1" class="griditem" src="images/b.jpg" srcset="images/b.jpg 2x" alt="description">
-                <img id="2" class="griditem" src="images/c.jpg" srcset="images/c.jpg 2x" alt="description">
-                <img id="3" class="griditem" src="images/e.jpg" srcset="images/e.jpg 2x" alt="description">
+                <div class="griditem"><img src="images/a.jpg" srcset="images/a_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(1)" alt="illustrated church interior"></div>
+                <div class="griditem"><img src="images/d.jpg" srcset="images/d_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(2)" alt="fantasy cave interior with characters"></div>
+                <div class="griditem"><img src="images/g.jpg" srcset="images/g_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(3)" alt="seaside bridge illustration"></div>
+                <div class="griditem"><img src="images/b.jpg" srcset="images/b_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(4)" alt="black cat with three eyes"></div>
+                <div class="griditem"><img src="images/e.jpg" srcset="images/e_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(5)" alt="fantasy cave illustration with dragon inside"></div>
+                <div class="griditem"><img src="images/k.jpg" srcset="images/k_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(6)" alt="fluffy dragon animated character design"></div>
+                <div class="griditem"><img src="images/f.jpg" srcset="images/f_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(7)"
+                        alt="animated characters in middle-eastern market with lanterns"></div>
+                <div class="griditem"><img src="images/h.jpg" srcset="images/h_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(8)"
+                        alt="character relaxing on loft bed with fantasy animals"></div>
+                <div class="griditem"><img src="images/c.jpg" srcset="images/c_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(9)" alt="jackal-shaped pokemon character"></div>
+                <div class="griditem"><img src="images/l.jpg" srcset="images/l_2x.jpg 2x"
+                        onclick="openModal(); currentSlide(10)"
+                        alt="illustrated girl with pet owl perched on her shoulder"></div>
+
+
             </div>
         </main>
+        <footer>
+            <h1><a href="http://i6.cims.nyu.edu/~ms12047/">i6 Index</a></h1>
+        </footer>
     </div>
 
-    <div id="modal" class="modal">
-        <div class="close"><img id="x" src="svg/x.svg" style="width: 100%"></div>
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="close"><img id="x" src="svg/x.svg" alt="close" onclick="closeModal()" style="width: 100%"></div>
+        <a class="prev" onclick="nextslide(-1)" style="left: 14%;">&#10094;</a>
+        <a class="next" onclick="nextslide(1)" style="right: 14%;">&#10095;</a>
         <div class="gallery">
-            <img id="thispic" src="images/b.jpg">
-            <h3 id="picdesc">Title - date - insert description here</h3>
-            <div class="thumblist">
-                <img class="thumbnail" src="images/b.jpg"> 
-                <img class="thumbnail" src="images/c.jpg"> 
-                <img class="thumbnail" src="images/e.jpg">
+
+            <div class="galleryitem"><img src="images/a.jpg" srcset="images/a_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(1)" alt="illustrated church interior"></div>
+            <div class="galleryitem"><img src="images/d.jpg" srcset="images/d_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(2)" alt="fantasy cave interior with characters"></div>
+            <div class="galleryitem"><img src="images/g.jpg" srcset="images/g_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(3)" alt="seaside bridge illustration"></div>
+            <div class="galleryitem"><img src="images/b.jpg" srcset="images/b_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(4)" alt="black cat with three eyes"></div>
+            <div class="galleryitem"><img src="images/e.jpg" srcset="images/e_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(5)" alt="fantasy cave illustration with dragon inside"></div>
+            <div class="galleryitem"><img src="images/k.jpg" srcset="images/k_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(6)" alt="fluffy dragon animated character design"></div>
+            <div class="galleryitem"><img src="images/f.jpg" srcset="images/f_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(7)"
+                    alt="animated characters in middle-eastern market with lanterns"></div>
+            <div class="galleryitem"><img src="images/h.jpg" srcset="images/h_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(8)" alt="character relaxing on loft bed with fantasy animals">
+            </div>
+            <div class="galleryitem"><img src="images/c.jpg" srcset="images/c_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(9)" alt="jackal-shaped pokemon character"></div>
+            <div class="galleryitem"><img src="images/l.jpg" srcset="images/l_2x.jpg 2x"
+                    onclick="openModal(); currentSlide(10)" alt="illustrated girl with pet owl perched on her shoulder">
             </div>
 
-        </div>
-    </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Belchite -&nbsp;</h2>
+                    <p>2019</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Pink Salt Cave -&nbsp;</h2>
+                    <p>2019</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Bixby Creek -&nbsp;</h2>
+                    <p>2018</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Cecil -&nbsp;</h2>
+                    <p>2018</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Vietnam -&nbsp;</h2>
+                    <p>2018</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Goat Dragon -&nbsp;</h2>
+                    <p>2018</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Istanbul -&nbsp;</h2>
+                    <p>2017</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Loft -&nbsp;</h2>
+                    <p>2018</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Lucario -&nbsp;</h2>
+                    <p>2018</p>
+                </div>
+            </div>
+            <div class="picdesc">
+                <div class="txtbox">
+                    <h2>Mary -&nbsp;</h2>
+                    <p>2019</p>
+                </div>
+            </div>
 
-    <footer>
-        <p><a href="/index.html">social media links</a></p>
-    </footer>
+            <div class="thumblist">
+                <img class="thumbnail" src="images/a.jpg" onclick="currentSlide(1)" alt="description">
+                <img class="thumbnail" src="images/d.jpg" onclick="currentSlide(2)" alt="description">
+                <img class="thumbnail" src="images/g.jpg" onclick="currentSlide(3)" alt="description">
+                <img class="thumbnail" src="images/b.jpg" onclick="currentSlide(4)" alt="description">
+                <img class="thumbnail" src="images/e.jpg" onclick="currentSlide(5)" alt="description">
+                <img class="thumbnail" src="images/k.jpg" onclick="currentSlide(6)" alt="description">
+                <img class="thumbnail" src="images/f.jpg" onclick="currentSlide(7)" alt="description">
+                <img class="thumbnail" src="images/h.jpg" onclick="currentSlide(8)" alt="description">
+                <img class="thumbnail" src="images/c.jpg" onclick="currentSlide(9)" alt="description">
+                <img class="thumbnail" src="images/l.jpg" onclick="currentSlide(10)" alt="description">
+            </div>
+        </div>
     </div>
 </body>
 
