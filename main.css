@@ -89,13 +89,11 @@ img {
     outline-color: #000000;
     transition: all 350ms;
     width: 100%;
-    height: auto;
 }
 .griditem > img {
     width: 100%;
     margin: 0px;
     margin-top: 8px;
-    height: auto;
 }
 .griditem > img:hover {
     box-shadow: 0px 0px 3px #000000;
@@ -144,6 +142,7 @@ img {
     .container {
         width: 80%;
         margin-top: 5px;
+        margin: auto;
    }
     .gridbox {
         line-height: 0;
@@ -151,7 +150,7 @@ img {
         margin: 0;
         column-gap: 8px;
         column-count: 2;
-        justify-content: center 
+        justify-content: center;
    }
     .griditem {
         display: inline;

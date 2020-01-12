@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Visual Development - Max</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .gridbox{
+            justify-content: center;
+        }
+        .griditem {
+            image-rendering: crisp-edges;
+        }
+
+        .spritebox {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: .25em;
+            margin: auto;
+            margin-top: .5em;
+            margin-bottom: .5em;
+            padding: .5em;
+            background-color: hsl(0, 0%, 7%);
+            outline-width: 1px;
+            outline-style: solid;
+            outline-color: #000000;
+            box-shadow: 0px 0px 5px #000000;
+        }
+        @media (max-width: 37.9em){
+            .spritebox {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dropdown" href="javascript:void(0);" onclick="dropdown()"><img id="icon" src="svg/bars.svg"
+            style="width: 100%"></div>
+    <ul class="navigation" id="navmenu">
+        <li><a class="home" href="index.html">Maxolotle</a></li>
+        <li><a href="index.html">Illustration</a></li>
+        <li><a href="visdev.html">Visual Development</a></li>
+        <li><a href="animations.html">Animations</a></li>
+        <li><a class="currentpage" href="gameart.html">Game Art</a></li>
+    </ul>
+    <div class="container" style="margin-top: 1em;">
+        <main>
+            <div class="spritebox">
+                <img src="images/game/startscreen.png" alt="desc">
+                <a href="https://github.com/cvmaxie/subway_rat"><img src="images/game/gamescreen.gif" alt="desc"></a>
+                <img src="images/game/winscreen.png" alt="desc">
+            </div>
+            <div class="gridbox">
+                <img class="griditem" src="images/game/city.png" alt="desc">
+                <img class="griditem" src="images/game/calendar.png" alt="desc">
+                <img class="griditem" src="images/game/rats.png" alt="desc">
+                <img class="griditem" src="images/game/ducklingfollow.gif" alt="desc">
+            </div>
+            <div class="spritebox">
+                <img src="images/game/frogstart.jpg" alt="desc">
+                <a href="https://github.com/cvmaxie/bobafrog"><img src="images/game/froggame.png" alt="desc"></a>
+                <img src="images/game/frogend.png" alt="desc">
+            </div>
+        </main>
+        <footer>
+            <h1><a href="https://github.com/cvmaxie">GitHub</a>
+                <a href="https://instagram.com/maxolotle">Instagram</a>
+            </h1>
+        </footer>
+    </div>
+
+</body>
+
+<script src="mobiledropdown.js"></script>
+<script src="modalgallery.js"></script>
+
+</html>
