@@ -3,9 +3,46 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Animation- Max</title>
+    <title>Animation - Max</title>
     <link href="main.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .videobox {
+            display: flex;
+            flex-direction: column;
+            background-color: hsl(0, 0%, 7%);
+            width: 100%;
+            padding: .5em;
+            outline-width: 1px;
+            outline-style: solid;
+            outline-color: #000000;
+            box-shadow: 0px 0px 5px #000000;
+        }
+
+        .videoscontainer {
+            display: grid;
+        }
+
+        .desc {
+            text-align: center;
+        }
+
+        /*-----MOBILE-----*/
+        @media (max-width: 37.9em) {
+            .videoscontainer {
+                grid-template-columns: 1fr;
+                grid-row-gap: 1em;
+            }
+        }
+
+        /*-----SMALL-MEDIUM DESKTOP-----*/
+        @media (min-width: 38em) {
+            .videoscontainer {
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 2em;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -19,12 +56,32 @@
     </ul>
     <div class="container">
         <main>
-            <div class="container"><iframe width="560" height="315" src="https://www.youtube.com/embed/rXFqQT39bV8"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe></div>
+            <div class="videoscontainer">
+                <div class="videobox">
+                    <iframe width="100%" height="300em" src="https://www.youtube.com/embed/rXFqQT39bV8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div style="margin: auto; padding: .5em;">
+                        <h2 class="desc">Cecil in the Car</h2>
+                        <p class="desc">Animated in Photoshop <br>Edited in After Effects
+                        </p>
+                    </div>
+                </div>
+                <div class="videobox">
+                    <iframe width="100%" height="300em" src="https://www.youtube.com/embed/MJFINtnxwbc" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div style="margin: auto; padding: .5em;">
+                        <h2 class="desc">Hila</h2>
+                        <p class="desc">Animated in Adobe Animate <br>Edited in After Effects
+                        </p>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
-            <h1><a href="http://i6.cims.nyu.edu/~ms12047/">i6 Index</a></h1>
+            <h1><a href="https://github.com/cvmaxie">GitHub</a> <a href="https://instagram.com/maxolotle">Instagram</a>
+            </h1>
         </footer>
     </div>
 </body>

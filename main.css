@@ -188,7 +188,8 @@ img {
         display: flex;
         margin: auto;
         flex-direction: row;
-        height: 100%;
+        flex-wrap: wrap;
+        height: 70%;
         width: 100%;
         justify-content: center;
    }
@@ -212,6 +213,7 @@ img {
     .galleryitem {
         margin: auto;
    }
+
    .picdesc {
         margin: auto;
         width: 70%;
