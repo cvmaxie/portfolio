@@ -74,8 +74,10 @@ footer {
 }
 .container {
     margin: auto;
-    width: 75%;
+    width: 100%
 }
+
+/*----------GRID BOX----------*/
 .gridbox {
     display: block;
 }

@@ -38,17 +38,17 @@ function display(n) {
   }
 
   for (i = 0; i < slide.length; i++) {//don't display any slide (excluding the exception)
-      slide[i].style.display = "none";
-      caption[i].style.display = "none";
+    slide[i].style.display = "none";
+    caption[i].style.display = "none";
   }
 
   for (i = 0; i < thumb.length; i++) {//add "active" emphasis to current slide thumb (darken others)
-      thumb[i].className = thumb[i].className.replace(" active", "");
+    thumb[i].className = thumb[i].className.replace(" active", "");
   }
 
-  slide[slideIndex-1].style.display = "block"; //display current slide index
-  thumb[slideIndex-1].className += " active"; //emphasize current index thumbnail
-  caption[slideIndex-1].style.display = "flex"; //display current caption
+  slide[slideIndex - 1].style.display = "block"; //display current slide index
+  thumb[slideIndex - 1].className += " active"; //emphasize current index thumbnail
+  caption[slideIndex - 1].style.display = "flex"; //display current caption
 
 }
 
