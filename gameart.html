@@ -7,18 +7,22 @@
     <link href="main.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .gridbox {
-            justify-content: center;
-        }
+
 
         .griditem {
             image-rendering: crisp-edges;
+            margin-bottom: .5em;
+        }
+
+        .item {
+            margin: auto;
+            padding: .25em;
         }
 
         .spritebox {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: .25em;
+            display: flex;
+            flex-wrap: wrap;
+            width: min-content;
             margin: auto;
             margin-top: .5em;
             margin-bottom: .5em;
@@ -32,8 +36,12 @@
 
         @media (max-width: 37.9em) {
             .spritebox {
-                display: block;
+                width: unset;
             }
+        }
+
+        .desc {
+            text-align: center;
         }
     </style>
 </head>
@@ -51,21 +59,29 @@
     <div class="container" style="margin-top: 1em;">
         <main>
             <div class="spritebox">
-                <img src="images/game/startscreen.png" alt="desc">
-                <a href="https://github.com/cvmaxie/subway_rat"><img src="images/game/gamescreen.gif" alt="desc"></a>
-                <img src="images/game/winscreen.png" alt="desc">
-            </div>
-            <div class="spritebox">
-                <img src="images/game/frogstart.jpg" alt="desc">
-                <a href="https://github.com/cvmaxie/bobafrog"><img src="images/game/froggame.png" alt="desc"></a>
-                <img src="images/game/frogend.png" alt="desc">
+                <iframe class="item"
+                    src="https://itch.io/embed/678591?linkback=true&amp;bg_color=222222&amp;fg_color=eeeeee&amp;link_color=9e2835&amp;border_color=3f2832"
+                    width="550" height="167" frameborder="0"><a href="https://cvmaxie.itch.io/seashore">Seashore by
+                        cvmaxie</a></iframe>
+                <iframe class="item"
+                    src="https://itch.io/embed/678649?linkback=true&amp;bg_color=222222&amp;fg_color=eeeeee&amp;link_color=4f6781&amp;border_color=3f2832"
+                    width="550" height="167" frameborder="0"><a href="https://cvmaxie.itch.io/blorby-blarby">Blorby
+                        &amp; Blarby by cvmaxie</a></iframe>
+
+                <div style="margin: auto; padding: .5em;">
+                    <p class="desc"> These games are playable in-browser. Their code repositories (along with other
+                        simple prototypes) can be found on <a style="text-decoration: underline"
+                            href="https://github.com/cvmaxie">my GitHub</a>!
+                    </p>
+                </div>
             </div>
             <div class="gridbox">
-                <img class="griditem" src="images/game/city.png" alt="desc">
-                <img class="griditem" src="images/game/calendar.png" alt="desc">
-                <img class="griditem" src="images/game/rats.png" alt="desc">
-                <img class="griditem" src="images/game/ducklingfollow.gif" alt="desc">
+                <div class="griditem"><img src="images/game/screenshots/itchcover.png" alt="desc"></div>
+                <div class="griditem"><img src="images/game/screenshots/screenshot4.png" alt="desc"></div>
+                <div class="griditem"><img src="images/game/screenshots/screenshot3.png" alt="desc"></div>
+                <div class="griditem"><img src="images/game/screenshots/itchcover2.png" alt="desc"></div>
             </div>
+
         </main>
         <footer>
             <h1><a href="https://github.com/cvmaxie">GitHub</a>
