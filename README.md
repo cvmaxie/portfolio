@@ -1,5 +1,4 @@
 # portfolio
-this is my personal art portfolio. 
-"maxolotle" is my web alias for illustration work. 
-It's a combination of max (my name) and axolotl, which is a mexican amphibian.
+An HTML/CSS/Javascript project for Web Design class.\
+Portfolio of illustrations I've made. (Not current, new portfolio in the works!)
 
